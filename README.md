@@ -10,14 +10,19 @@ MergePDF es un cliente web liviano desarrollado con Flask que simplifica la fusi
 
 ## Importante⚠️:
 
-No olvides reemplazar en el [Dockerfile](Dockerfile) la variable de entorno `SECRET_KEY` con cualquier token generado por ti.
+Para hacer un build local de la imagen debes usar los siguientes comandos.
+```
+docker build -t pdfmerger:test .
+```
 
 ## Ejecutar con Docker:
 
 Para ejecutar la aplicacion solo basta con ejecutar el siguiente comando:
 
+Para ejecutar la aplicacion solo basta con ejecutar el siguiente comando:
+
 ```
-docker run -p 80:5000 pdfmerger:latest
+docker run -p 8080:8000 --env-file .env pdfmerger:latest
 ```
 
 ## Ejecutar con Python:
